@@ -3,9 +3,11 @@
   display: flex;
   height: 500px;
   color: white;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .home-banner h1 {
@@ -16,13 +18,19 @@
 .section-title {
   text-align: center;
   margin-top: 20px;
+  font-weight: bolder;
+  font-size: 48px;
+  color: #0000ff;
 }
 
 .home-btn-container {
   display: flex;
   justify-content: center;
   margin-top: 30px;
-  gap: 20px;
+  gap: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  /* gap: 20px; */
 }
 
 .tab-button {
@@ -34,7 +42,10 @@
   background-color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+.tab-content {
+  padding-left: 10%;
+  padding-right: 10%;
+}
 .tab-button:hover {
   background-color: #82b2e5;
   color: white;
@@ -48,18 +59,15 @@
 .tab-content h2 {
   text-decoration: underline;
   text-underline-offset: 10px;
-  margin-left: 50px;
   color: orangered;
 }
 
 .tab-data {
-  align-items: center;
-
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
 }
 .tab-data p {
-  margin-left: 40px;
   line-height: 2;
 }
 
@@ -69,7 +77,9 @@
   gap: 20px;
   padding: 20px;
   justify-content: center;
-  max-width: 1200px;
+  padding-left: 10%;
+  padding-right: 10%;
+  /* max-width: 1200px; */
   margin: 20px auto;
   text-align: center;
 }
