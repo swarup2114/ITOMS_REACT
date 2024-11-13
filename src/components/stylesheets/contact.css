@@ -1,148 +1,146 @@
 /* Contact Page Styles */
 .about-card-show {
-    text-align: center;
-    padding: 20px;
-    background-color: #20c997;
-    border-radius: 8px;
-    margin-bottom: 30px;
+  text-align: center;
+  padding: 20px;
+  background-color: #20c997;
+  border-radius: 8px;
+  margin-bottom: 30px;
 }
 
 .about-card-show h1 {
-    font-size: 2rem;
-    color: #333;
+  font-size: 2rem;
+  color: #333;
 }
 
 .about-card-show p {
-    font-size: 1rem;
-    color: #666;
-    margin-top: 10px;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
 }
-.about-container{
-  
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    width: 90%;
-   margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.about-container {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 90%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* About Card Container */
 .about-card-container {
-    display: flex;
-    /* justify-content: center; */
-   
+  display: flex;
+  /* justify-content: center; */
 }
 
 .about-card-container h1 {
-    font-size: 1.8rem;
-    color: #333;
+  font-size: 1.8rem;
+  color: #333;
 }
 
 .about-card-container p {
-    font-size: 1rem;
-    color: #555;
-    margin-top: 10px;
-    line-height: 1.6;
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
 }
 
 .enquiry-form {
-    width: 100%;
-    padding: 20px;
-    border-left: 1px solid wheat;
-    border-radius: 8px;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  width: 100%;
+  padding: 20px;
+  border-left: 1px solid wheat;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 .enquiry-form h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .enquiry-form input,
 .enquiry-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-    color: #333;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
 }
 
-.enquiry-form input[type='text']:focus,
+.enquiry-form input[type="text"]:focus,
 .enquiry-form textarea:focus {
-    border-color: #4caf50;
-    outline: none;
+  border-color: #4caf50;
+  outline: none;
 }
 
 .enquiry-form textarea {
-    resize: vertical;
-    min-height: 120px;
+  resize: vertical;
+  min-height: 120px;
 }
-.enquiry-form button{
-    padding: 10px 20px;
-    background-color: orangered;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.2rem;
+.enquiry-form button {
+  padding: 10px 20px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
 }
 h1 {
-    font-size: 1.5rem;
-    color: #333;
-    text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
 }
 
 h1 + h1 {
-    font-size: 1.2rem;
-    color: #777;
-    text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+  text-align: center;
 }
 
 h1 + h1 + h1 {
-    font-size: 1.2rem;
-    color: #777;
-    text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+  text-align: center;
 }
 
 h1 + h1 + h1 + h1 {
-    font-size: 1.2rem;
-    color: #333;
-    text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .about-card-container {
-        flex-direction: column;
-        padding: 15px;
-    }
+  .about-card-container {
+    flex-direction: column;
+    padding: 15px;
+  }
 
-    .enquiry-form {
-        width: 100%;
-        margin-top: 20px;
-    }
+  .enquiry-form {
+    width: 100%;
+    margin-top: 20px;
+  }
 
-    .enquiry-form input,
-    .enquiry-form textarea {
-        width: 100%;
-    }
+  .enquiry-form input,
+  .enquiry-form textarea {
+    width: 100%;
+  }
 
-    .about-card-show h1 {
-        font-size: 1.5rem;
-    }
+  .about-card-show h1 {
+    font-size: 1.5rem;
+  }
 
-    .about-card-show p {
-        font-size: 0.9rem;
-    }
+  .about-card-show p {
+    font-size: 0.9rem;
+  }
 
-    .about-card-container h1 {
-        font-size: 1.4rem;
-    }
+  .about-card-container h1 {
+    font-size: 1.4rem;
+  }
 
-    .about-card-container p {
-        font-size: 0.9rem;
-    }
+  .about-card-container p {
+    font-size: 0.9rem;
+  }
 }
