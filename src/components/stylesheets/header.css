@@ -1,9 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  /* padding: 20px; */
-  height: 10vh;
-  align-items: center;
+  padding: 20px;
   padding-left: 5%;
   padding-right: 5%;
   background-color: azure;
@@ -21,14 +19,30 @@
 }
 
 .header button {
-  border: 1px solid black;
+  /* border: 1px solid black;
   padding: 10px 20px;
   font-size: 20px;
   font-weight: 600;
   background-color: transparent;
-  color: darkblue;
+  color: darkblue; */
   /* border: none; */
-  border-radius: 5px;
+  /* border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; */
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: transparent;
+  /* Button background color */
+  color: rgb(50, 50, 105);
+  border: 1px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.header button:hover {
+  background-color: rgb(50, 50, 105);
+  color: white;
 }

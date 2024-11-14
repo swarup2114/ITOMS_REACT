@@ -1,6 +1,7 @@
 .login-page {
   display: flex;
 }
+
 .login-inputs {
   margin-top: 60px;
   background-color: #fff;
@@ -51,10 +52,12 @@
 .login-inputs button:hover {
   background-color: green;
 }
+
 @media screen and (max-width: 768px) {
   .login-page {
     flex-direction: column;
   }
+
   .login-inputs {
     margin-top: 60px;
     margin: auto;
