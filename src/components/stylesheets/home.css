@@ -20,7 +20,7 @@
   margin-top: 20px;
   font-weight: bolder;
   font-size: 48px;
-  color: #0000ff;
+  color: #349DFD;
 }
 
 .home-btn-container {
@@ -42,10 +42,12 @@
   background-color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .tab-content {
   padding-left: 10%;
   padding-right: 10%;
 }
+
 .tab-button:hover {
   background-color: #82b2e5;
   color: white;
@@ -67,6 +69,7 @@
   display: flex;
   flex-direction: row;
 }
+
 .tab-data p {
   line-height: 2;
 }
@@ -120,9 +123,11 @@
     height: auto;
     margin-top: 5px;
   }
+
   .tab-data {
     flex-direction: column;
   }
+
   .home-card-container {
     justify-content: flex-start;
   }

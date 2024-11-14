@@ -48,8 +48,8 @@
 .enquiry-form {
   width: 100%;
   padding: 20px;
-  border-left: 1px solid rgb(243, 242, 240);
-
+  border-left: 1px solid wheat;
+  border-radius: 8px;
   gap: 10px;
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   display: flex;
@@ -76,13 +76,6 @@
   color: #333;
 }
 
-.enquiry-form input::placeholder,
-.enquiry-form textarea::placeholder {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-}
-
-
 .enquiry-form input[type="text"]:focus,
 .enquiry-form textarea:focus {
   border-color: #4caf50;
@@ -100,7 +93,7 @@
 .enquiry-form .input-group {
   display: flex;
   width: 100%;
-  gap: 10px;
+  gap: 50px;
   /* Add space between the inputs */
 }
 
@@ -114,10 +107,11 @@
   background-color: orangered;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 1.2rem;
-
-
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 
 .enquiry-form button:hover {
@@ -150,6 +144,18 @@ h1+h1+h1+h1 {
 
 .contact-deatils h1 {
   text-align: center;
+}
+
+.contact-deatils a {
+  text-decoration: none;
+  text-align: center;
+  color: #333;
+  font-size: 26px;
+  /* text-underline-offset: none; */
+}
+
+.contact-deatils a:hover {
+  color: orange;
 }
 
 /* Responsive Styles */

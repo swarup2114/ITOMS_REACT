@@ -11,10 +11,12 @@ const Header = () => {
   return (
     <div className="header">
       <div>
-        <img
-          src="http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/ina-logo.png"
-          alt="logo"
-        />
+        <NavLink to="">
+          <img
+            src="http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/ina-logo.png"
+            alt="logo"
+          />
+        </NavLink>
       </div>
       <div className="links">
         <NavLink to="/" className="link-styles">

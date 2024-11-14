@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import "../stylesheets/login.css";
 import { useNavigate } from "react-router-dom";
+import { GrValidate } from "react-icons/gr";
+
 
 const Login = () => {
   const usenav = useNavigate();
@@ -25,14 +27,14 @@ const Login = () => {
         />
       </div>
       <div className="login-inputs">
-        <h1>Login</h1>
+        <h1>Welcome back</h1>
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter Your Email "
         />
-        <button onClick={isUserAutharized}>Validate Account</button>
+        <button onClick={isUserAutharized}> <GrValidate /> Validate Email</button>
       </div>
     </div>
   );

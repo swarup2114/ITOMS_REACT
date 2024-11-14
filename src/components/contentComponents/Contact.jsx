@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from 'react';
 import "../stylesheets/contact.css";
 import { HiChevronDoubleRight } from "react-icons/hi";
 import { BsFillSendFill } from "react-icons/bs";
 
+
+
 const Contact = () => {
+
+
   return (
     <div>
       <div className="about-card-show">
@@ -32,7 +36,7 @@ const Contact = () => {
             <p> <HiChevronDoubleRight /> Hire based on skill set</p>
           </div>
           <div className="enquiry-form">
-            <h3>lets get connected</h3>
+            <h3>Let's Get Connected</h3>
 
             <input type="text" placeholder="Your Name" />
             <input type="text" placeholder="Your Email" />
@@ -45,9 +49,10 @@ const Contact = () => {
         </div>
         <div className="contact-deatils">
           <h1> Contact us by Phone Number or Email Address</h1>
-          <h1>+91 82478 98008</h1>
+          <h1><a href="tel:+918247898008" target="_blank">+91 82478 98008</a></h1>
           <h1>OR</h1>
-          <h1>support@inapayments.com</h1>
+
+          <h1>  <a href="mailto:support@inapayments.com" target="_blank">support@inapayments.com</a></h1>
         </div>
       </div>
 
@@ -56,3 +61,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
