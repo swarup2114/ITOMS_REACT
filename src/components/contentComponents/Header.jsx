@@ -2,6 +2,8 @@
 import React from "react";
 import "../stylesheets/header.css";
 import { NavLink, useNavigate } from "react-router-dom";
+import { RiLoginCircleFill } from "react-icons/ri";
+//just checking
 
 const Header = () => {
   const usenav = useNavigate();
@@ -23,7 +25,7 @@ const Header = () => {
         </NavLink>
       </div>
       <div>
-        <button onClick={() => usenav("/login")}>Log In</button>
+        <button onClick={() => usenav("/login")}><RiLoginCircleFill />Log In</button>
       </div>
     </div>
   );

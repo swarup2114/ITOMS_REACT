@@ -1,5 +1,7 @@
 import React from "react";
 import "../stylesheets/contact.css";
+import { HiChevronDoubleRight } from "react-icons/hi";
+import { BsFillSendFill } from "react-icons/bs";
 
 const Contact = () => {
   return (
@@ -23,27 +25,32 @@ const Contact = () => {
               work, but in life too. We help spare your time to focus on the
               bigger picture by taking care of the little details.
             </p>
-            <p>Staff works from our offices in USA</p>
-            <p>Scale up/ down on demand</p>
+            <p> <HiChevronDoubleRight />Staff works from our offices in USA</p>
+            <p> <HiChevronDoubleRight />Scale up/ down on demand</p>
 
-            <p> One time or on going projects</p>
-            <p>Hire based on skill set</p>
+            <p> <HiChevronDoubleRight /> One time or on going projects</p>
+            <p> <HiChevronDoubleRight /> Hire based on skill set</p>
           </div>
           <div className="enquiry-form">
             <h3>lets get connected</h3>
-            <input type="text" placeholder="Enter Name" />
-            <input type="text" placeholder="Enter Name" />
-            <input type="text" placeholder="Enter Name" />
-            <input type="text" placeholder="Enter Name" />
-            <textarea placeholder="Enter Message" />
-            <button>Send Message</button>
+
+            <input type="text" placeholder="Your Name" />
+            <input type="text" placeholder="Your Email" />
+            <input type="text" placeholder="Your Phone" />
+            <input type="text" placeholder="Your Subject" />
+
+            <textarea placeholder="Your Message" />
+            <button> <BsFillSendFill /> Send Message</button>
           </div>
         </div>
-        <h1> Contact us by Phone Number or Email Address</h1>
-        <h1>+91 82478 98008</h1>
-        <h1>OR</h1>
-        <h1>support@inapayments.com</h1>
+        <div className="contact-deatils">
+          <h1> Contact us by Phone Number or Email Address</h1>
+          <h1>+91 82478 98008</h1>
+          <h1>OR</h1>
+          <h1>support@inapayments.com</h1>
+        </div>
       </div>
+
     </div>
   );
 };

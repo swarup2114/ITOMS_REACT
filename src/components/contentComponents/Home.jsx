@@ -3,6 +3,8 @@ import "../stylesheets/home.css";
 import { homeTabData } from "../../jsonFormatData/home";
 import { homeCardData } from "../../jsonFormatData/home";
 import Footer from "./Footer";
+// import Animation from "../contentComponents/Animation";
+
 
 const Home = () => {
   const [currentTab, setCurrentTab] = useState("Zero Touch Deployment");
@@ -14,6 +16,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="home-banner">
+        {/* <Animation /> */}
         <img
           src="https://www.pngarts.com/files/3/Technology-Free-PNG-Image.png"
           alt="Technology Banner"

@@ -17,6 +17,7 @@
   color: #666;
   margin-top: 10px;
 }
+
 .about-container {
   padding: 30px;
   background-color: #ffffff;
@@ -39,7 +40,7 @@
 
 .about-card-container p {
   font-size: 1rem;
-  color: #555;
+  color: #3d7488;
   margin-top: 10px;
   line-height: 1.6;
 }
@@ -47,20 +48,26 @@
 .enquiry-form {
   width: 100%;
   padding: 20px;
-  border-left: 1px solid wheat;
-  border-radius: 8px;
+  border-left: 1px solid rgb(243, 242, 240);
+
+  gap: 10px;
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow wrapping for smaller screens */
 }
 
 .enquiry-form h3 {
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 15px;
+  width: 100%;
+  /* Ensure the heading takes full width */
 }
 
 .enquiry-form input,
 .enquiry-form textarea {
-  width: 100%;
+
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
@@ -68,6 +75,13 @@
   font-size: 1rem;
   color: #333;
 }
+
+.enquiry-form input::placeholder,
+.enquiry-form textarea::placeholder {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
 
 .enquiry-form input[type="text"]:focus,
 .enquiry-form textarea:focus {
@@ -78,7 +92,23 @@
 .enquiry-form textarea {
   resize: vertical;
   min-height: 120px;
+  width: 100%;
+  /* Full width for the textarea */
 }
+
+/* New styles to display inputs in a single row */
+.enquiry-form .input-group {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  /* Add space between the inputs */
+}
+
+.enquiry-form .input-group input {
+  width: 48%;
+  /* Each input takes 48% of the width */
+}
+
 .enquiry-form button {
   padding: 10px 20px;
   background-color: orangered;
@@ -86,28 +116,39 @@
   border: none;
   border-radius: 10px;
   font-size: 1.2rem;
+
+
 }
+
+.enquiry-form button:hover {
+  background-color: aquamarine;
+}
+
 h1 {
   font-size: 1.5rem;
   color: #333;
-  text-align: center;
+  /* text-align: center; */
 }
 
-h1 + h1 {
+h1+h1 {
   font-size: 1.2rem;
   color: #777;
-  text-align: center;
+
 }
 
-h1 + h1 + h1 {
+h1+h1+h1 {
   font-size: 1.2rem;
   color: #777;
-  text-align: center;
+
 }
 
-h1 + h1 + h1 + h1 {
+h1+h1+h1+h1 {
   font-size: 1.2rem;
   color: #333;
+
+}
+
+.contact-deatils h1 {
   text-align: center;
 }
 
