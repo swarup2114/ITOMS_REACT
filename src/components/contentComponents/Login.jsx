@@ -4,7 +4,6 @@ import "../stylesheets/login.css";
 import { useNavigate } from "react-router-dom";
 import { GrValidate } from "react-icons/gr";
 
-
 const Login = () => {
   const usenav = useNavigate();
   const userEmail = "swarup";
@@ -29,12 +28,16 @@ const Login = () => {
       <div className="login-inputs">
         <h1>Welcome back</h1>
         <input
+          className="email-input"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter Your Email "
         />
-        <button onClick={isUserAutharized}> <GrValidate /> Validate Email</button>
+        <button onClick={isUserAutharized}>
+          {" "}
+          <GrValidate /> Validate Email
+        </button>
       </div>
     </div>
   );
