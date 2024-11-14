@@ -30,7 +30,7 @@ const Home = () => {
       </div>
 
       <div className="section-title">
-        <h1>Terminal Lifecycle Management</h1>
+        <div>Terminal Lifecycle Management</div>
       </div>
 
       <div className="home-btn-container">
@@ -48,9 +48,9 @@ const Home = () => {
       <div className="tab-content">
         {getCurrentTabData() && (
           <div>
-            <h2>{getCurrentTabData().title}</h2>
             <div className="tab-data">
               <div>
+                <h2>{getCurrentTabData().title}</h2>
                 <p>{getCurrentTabData().description}</p>
               </div>
               <div>

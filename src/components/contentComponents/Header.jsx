@@ -15,11 +15,15 @@ const Header = () => {
         />
       </div>
       <div className="links">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+        <NavLink to="/" className="link-styles">
+          Home
+        </NavLink>
+        <NavLink to="/contact" className="link-styles">
+          Contact
+        </NavLink>
       </div>
       <div>
-        <button onClick={() => usenav("/login")}>Log-in</button>
+        <button onClick={() => usenav("/login")}>Log In</button>
       </div>
     </div>
   );
