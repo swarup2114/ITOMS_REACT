@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../stylesheets/home.css";
 import { homeTabData } from "../../jsonFormatData/home";
-import { homeCardData } from "../../jsonFormatData/home";
 import Footer from "./Footer";
 
 const Home = () => {
@@ -18,7 +17,7 @@ const Home = () => {
     const intervalId = setInterval(() => {
       // Increment the tab index, and loop back to the start when it exceeds the number of tabs
       setCurrentTabIndex((prevIndex) => (prevIndex + 1) % homeTabData.length);
-    }, 5000); // 5000 milliseconds (5 seconds)
+    }, 50000); // 5000 milliseconds (5 seconds)
 
     // Clean up the interval when the component is unmounted
     return () => clearInterval(intervalId);
@@ -80,8 +79,9 @@ const Home = () => {
 
       {/* Card data container */}
       <div className="home-card-container">
-        {homeCardData.map((item, id) => (
+        {getCurrentTabData().cards.map((item, id) => (
           <div className="home-card-data" key={id}>
+            <img src={item.img} alt="dummy" height={100} width={100} />
             <h6>{item.title}</h6>
             <p>{item.description}</p>
           </div>
