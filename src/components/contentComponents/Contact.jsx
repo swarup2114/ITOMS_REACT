@@ -39,10 +39,12 @@ const Contact = () => {
             <button>Send Message</button>
           </div>
         </div>
-        <h1> Contact us by Phone Number or Email Address</h1>
+      <div className="conatct-info">
+      <h1> Contact us by Phone Number or Email Address</h1>
         <h1>+91 82478 98008</h1>
         <h1>OR</h1>
         <h1>support@inapayments.com</h1>
+      </div>
       </div>
     </div>
   );

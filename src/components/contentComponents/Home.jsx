@@ -1,15 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../stylesheets/home.css";
 import { homeTabData } from "../../jsonFormatData/home";
 import { homeCardData } from "../../jsonFormatData/home";
 import Footer from "./Footer";
 
 const Home = () => {
-  const [currentTab, setCurrentTab] = useState("Zero Touch Deployment");
+  // Initialize state for the current tab index (using the tab index instead of the title)
+  const [currentTabIndex, setCurrentTabIndex] = useState(0);
 
+  // Function to get current tab data based on the index
   const getCurrentTabData = () => {
-    return homeTabData.find((tab) => tab.title === currentTab);
+    return homeTabData[currentTabIndex];
   };
+
+  // Set interval to update the current tab every 5 seconds
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      // Increment the tab index, and loop back to the start when it exceeds the number of tabs
+      setCurrentTabIndex((prevIndex) => (prevIndex + 1) % homeTabData.length);
+    }, 5000); // 5000 milliseconds (5 seconds)
+
+    // Clean up the interval when the component is unmounted
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div className="home-container">
@@ -37,8 +50,8 @@ const Home = () => {
         {homeTabData.map((tab, index) => (
           <button
             key={index}
-            onClick={() => setCurrentTab(tab.title)}
-            className={`tab-button ${currentTab === tab.title ? "active" : ""}`}
+            onClick={() => setCurrentTabIndex(index)} // Update tab when clicked
+            className={`tab-button ${currentTabIndex === index ? "active" : ""}`}
           >
             {tab.title}
           </button>
@@ -64,17 +77,17 @@ const Home = () => {
           </div>
         )}
       </div>
-      {/* card data container */}
+
+      {/* Card data container */}
       <div className="home-card-container">
-        {homeCardData.map((item, id) => {
-          return (
-            <div className="home-card-data" key={id}>
-              <h6>{item.title}</h6>
-              <p>{item.description}</p>
-            </div>
-          );
-        })}
+        {homeCardData.map((item, id) => (
+          <div className="home-card-data" key={id}>
+            <h6>{item.title}</h6>
+            <p>{item.description}</p>
+          </div>
+        ))}
       </div>
+
       <Footer />
     </div>
   );

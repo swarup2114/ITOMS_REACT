@@ -9,12 +9,12 @@
 
 .about-card-show h1 {
   font-size: 2rem;
-  color: #333;
+  color:white;
 }
 
 .about-card-show p {
   font-size: 1rem;
-  color: #666;
+ font-weight: 600;
   margin-top: 10px;
 }
 .about-container {
@@ -87,28 +87,9 @@
   border-radius: 10px;
   font-size: 1.2rem;
 }
-h1 {
-  font-size: 1.5rem;
-  color: #333;
+.conatct-info h1{
   text-align: center;
-}
-
-h1 + h1 {
-  font-size: 1.2rem;
-  color: #777;
-  text-align: center;
-}
-
-h1 + h1 + h1 {
-  font-size: 1.2rem;
-  color: #777;
-  text-align: center;
-}
-
-h1 + h1 + h1 + h1 {
-  font-size: 1.2rem;
-  color: #333;
-  text-align: center;
+  font-size: 1.8rem;
 }
 
 /* Responsive Styles */

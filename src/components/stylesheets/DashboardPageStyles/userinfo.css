@@ -1,0 +1,120 @@
+.user-info-data-conatiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;  /* Allow wrapping when necessary */
+  overflow-x: auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-grow: 1; /* Allow the cards to grow */
+  max-width: 100%;
+  flex-basis: calc(25% - 20px); /* 4 cards in a row (25% per card) */
+  box-sizing: border-box; /* Prevent cards from overflowing */
+}
+
+.card img {
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+}
+
+.card-info {
+  margin-left: 15px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+.card svg {
+  color: white;
+  background-color: orangered;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-stat {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Media Queries for responsiveness */
+
+/* Medium screens (max-width: 1024px): 2 cards per row */
+@media (max-width: 1024px) {
+  .user-info-data-conatiner {
+    justify-content: space-evenly;
+  }
+
+  .card {
+    flex-basis: calc(50% - 20px); /* Two cards per row */
+  }
+}
+
+/* Small screens (max-width: 768px): 1 card per row */
+@media (max-width: 768px) {
+  .user-info-data-conatiner {
+    gap: 0px;
+  }
+  .card {
+    flex-basis: 100%; /* One card per row */
+    margin-bottom: 20px;
+  }
+}
+
+/* Very small screens (max-width: 480px): Stack cards vertically, reduce image size */
+@media (max-width: 480px) {
+  .user-info-data-conatiner {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px; /* Reduced gap */
+  }
+
+  .card {
+    width: 90%; /* Take up 90% of the container's width */
+    margin-bottom: 20px;
+  }
+
+  .card img {
+    width: 80px;  /* Reduce image size */
+    height: 80px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+}

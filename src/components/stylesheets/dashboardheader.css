@@ -1,0 +1,110 @@
+.dashbaord-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 30px;
+  gap: 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff;
+}
+
+.dashbaord-header img {
+  width: 30px;
+  border: 1px solid green;
+  border-radius: 50%;
+}
+
+.dashbaord-header > div {
+  display: flex;
+  align-items: center;
+}
+
+.dashbaord-header button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  font-weight: 700;
+}
+
+.dashbaord-header button:hover {
+  background-color: #32d9f7a8;
+  border-radius: 10px;
+}
+
+.dashbaord-header button:focus {
+  outline: none;
+}
+
+.dashbaord-header button svg {
+  margin-top: 2px;
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+.dashbaord-header button:hover svg {
+  transform: rotate(180deg);
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #ffffff;
+   
+  }
+
+  .dashbaord-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+    gap: 10px;
+    flex-direction: column;
+    position: absolute;
+    top:40px;
+    width: 100%;
+    padding: 5px 0;
+   
+   
+  }
+
+  .dashbaord-header > div {
+    flex-direction: column;
+  }
+
+  .dashbaord-header button {
+    font-size: 14px;
+    padding: 8px 12px;
+    
+  }
+
+  .toggle-button {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+
+  /* Hide the header when the menu is toggled */
+  .dashbaord-header-hidden {
+    display: none;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
