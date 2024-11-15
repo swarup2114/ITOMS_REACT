@@ -55,6 +55,9 @@
   display: flex;
   flex-wrap: wrap;
   /* Allow wrapping for smaller screens */
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow wrapping for smaller screens */
 }
 
 .enquiry-form h3 {
@@ -67,7 +70,6 @@
 
 .enquiry-form input,
 .enquiry-form textarea {
-
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
@@ -124,22 +126,19 @@ h1 {
   /* text-align: center; */
 }
 
-h1+h1 {
+h1 + h1 {
   font-size: 1.2rem;
   color: #777;
-
 }
 
-h1+h1+h1 {
+h1 + h1 + h1 {
   font-size: 1.2rem;
   color: #777;
-
 }
 
-h1+h1+h1+h1 {
+h1 + h1 + h1 + h1 {
   font-size: 1.2rem;
   color: #333;
-
 }
 
 .contact-deatils h1 {
