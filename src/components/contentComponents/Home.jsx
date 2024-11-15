@@ -17,7 +17,7 @@ const Home = () => {
     const intervalId = setInterval(() => {
       // Increment the tab index, and loop back to the start when it exceeds the number of tabs
       setCurrentTabIndex((prevIndex) => (prevIndex + 1) % homeTabData.length);
-    }, 50000); // 5000 milliseconds (5 seconds)
+    }, 5000); // 5000 milliseconds (5 seconds)
 
     // Clean up the interval when the component is unmounted
     return () => clearInterval(intervalId);
