@@ -29,21 +29,22 @@ const Contact = () => {
               work, but in life too. We help spare your time to focus on the
               bigger picture by taking care of the little details.
             </p>
-            <p> <HiChevronDoubleRight />Staff works from our offices in USA</p>
-            <p> <HiChevronDoubleRight />Scale up/ down on demand</p>
+            <p style={{ display: "flex", flexDirection: "row", alignItems: "center" }}> <div><HiChevronDoubleRight /></div><div>   Staff works from our offices in USA</div></p>
+            <p> <HiChevronDoubleRight />   Scale up/ down on demand</p>
 
-            <p> <HiChevronDoubleRight /> One time or on going projects</p>
-            <p> <HiChevronDoubleRight /> Hire based on skill set</p>
+            <p> <HiChevronDoubleRight />    One time or on going projects</p>
+            <p> <HiChevronDoubleRight />   Hire based on skill set</p>
           </div>
           <div className="enquiry-form">
             <h3>Let's Get Connected</h3>
 
-            <input type="text" placeholder="Your Name" />
-            <input type="text" placeholder="Your Email" />
-            <input type="text" placeholder="Your Phone" />
-            <input type="text" placeholder="Your Subject" />
-
-            <textarea placeholder="Your Message" />
+            <input type="text" placeholder="Your Name" className='input-text-field' />
+            <input type="text" placeholder="Your Email" className='input-text-field' />
+            <input type="text" placeholder="Your Phone" className='input-text-field' />
+            <input type="text" placeholder="Your Subject" className='input-text-field' />
+            <div className='input-text-your-message' >
+              <textarea placeholder="Your Message" />
+            </div>
             <button> <BsFillSendFill /> Send Message</button>
           </div>
         </div>

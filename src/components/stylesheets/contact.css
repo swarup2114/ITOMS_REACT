@@ -46,15 +46,25 @@
 }
 
 .enquiry-form {
-  width: 100%;
+  width: 70vw;
   padding: 20px;
   border-left: 1px solid wheat;
   border-radius: 8px;
-  gap: 10px;
+  /* gap: 10px; */
+  row-gap: 10px;
+  column-gap: 1vw;
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   display: flex;
   flex-wrap: wrap;
   /* Allow wrapping for smaller screens */
+}
+
+.input-text-field {
+  width: 15vw;
+}
+
+.input-text-your-message {
+  width: 32vw;
 }
 
 .enquiry-form h3 {
