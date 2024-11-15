@@ -6,8 +6,6 @@ import { BsFillSendFill } from "react-icons/bs";
 
 
 const Contact = () => {
-
-
   return (
     <div>
       <div className="about-card-show">

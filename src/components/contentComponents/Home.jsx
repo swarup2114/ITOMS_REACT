@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../stylesheets/home.css";
-import { homeTabData } from "../../jsonFormatData/home";
+import { homeTabData } from "../../jsonFormatData/homeData";
 import Footer from "./Footer";
 
 const Home = () => {
