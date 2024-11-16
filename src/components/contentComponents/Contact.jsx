@@ -27,11 +27,26 @@ const Contact = () => {
               work, but in life too. We help spare your time to focus on the
               bigger picture by taking care of the little details.
             </p>
-            <p style={{ display: "flex", flexDirection: "row", alignItems: "center" }}> <div><HiChevronDoubleRight /></div><div>   Staff works from our offices in USA</div></p>
-            <p> <HiChevronDoubleRight />   Scale up/ down on demand</p>
+            <div >
+              <p className="parabullet">
+                {" "}
+                <HiChevronDoubleRight />Staff works from our offices in USA
+              </p>
+              <p className="parabullet">
+                {" "}
+                <HiChevronDoubleRight />
+                Scale up/ down on demand
+              </p>
 
-            <p> <HiChevronDoubleRight />    One time or on going projects</p>
-            <p> <HiChevronDoubleRight />   Hire based on skill set</p>
+              <p className="parabullet">
+                {" "}
+                <HiChevronDoubleRight /> One time or on going projects
+              </p>
+              <p className="parabullet">
+                {" "}
+                <HiChevronDoubleRight /> Hire based on skill set
+              </p>
+            </div>
           </div>
           <div className="enquiry-form">
             <h3>Let's Get Connected</h3>
