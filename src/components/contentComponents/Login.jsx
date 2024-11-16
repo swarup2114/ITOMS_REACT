@@ -5,16 +5,14 @@ import { useNavigate } from "react-router-dom";
 import { GrValidate } from "react-icons/gr";
 
 const Login = () => {
-  const usenav = useNavigate();
-  const userEmail = "swarup";
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
-  // const [useAuth,setUserAuth]=useState(false)
-
-  const isUserAutharized = () => {
-    if (email === userEmail) {
-      usenav("/dashboard");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const isUserAuthorized = () => {
+    if (emailRegex.test(email)) {
+      navigate("/dashboard");
     } else {
-      alert("User Invalid");
+      alert("Invalid Email. Please enter a valid email address.");
     }
   };
   return (
@@ -34,7 +32,7 @@ const Login = () => {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter Your Email "
         />
-        <button onClick={isUserAutharized}>
+        <button onClick={isUserAuthorized}>
           {" "}
           <GrValidate /> Validate Email
         </button>
