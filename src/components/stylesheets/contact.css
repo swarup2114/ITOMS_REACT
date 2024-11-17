@@ -1,3 +1,4 @@
+
 /* Contact Page Styles */
 .about-card-show {
   text-align: center;
@@ -9,19 +10,13 @@
 
 .about-card-show h1 {
   font-size: 2rem;
-  color: #333;
+  color:white;
 }
 
 .about-card-show p {
   font-size: 1rem;
   color: #666;
   margin-top: 10px;
-}
-
-.parabullet {
-  display: flex;
-  align-items: center;
-
 }
 
 .about-container {
@@ -51,26 +46,23 @@
   line-height: 1.6;
 }
 
+
+.parabullet {
+  display: flex;
+  align-items: center;
+
+}
+
 .enquiry-form {
-  width: 70vw;
+  width: 100%;
   padding: 20px;
   border-left: 1px solid wheat;
   border-radius: 8px;
-  /* gap: 10px; */
-  row-gap: 10px;
-  column-gap: 1vw;
+  gap: 10px;
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   display: flex;
   flex-wrap: wrap;
   /* Allow wrapping for smaller screens */
-}
-
-.input-text-field {
-  width: 15vw;
-}
-
-.input-text-your-message {
-  width: 32vw;
 }
 
 .enquiry-form h3 {

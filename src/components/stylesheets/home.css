@@ -20,7 +20,7 @@
   margin-top: 20px;
   font-weight: bolder;
   font-size: 48px;
-  color: #349DFD;
+  color: #349dfd;
 }
 
 .home-btn-container {
@@ -105,7 +105,7 @@
 .home-card-data img {
   position: absolute;
   left: 30%;
-  top: -40px
+  top: -40px;
 }
 
 .home-card-data h6 {

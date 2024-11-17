@@ -1,0 +1,204 @@
+/* General Header Styling */
+.dashboard-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 30px;
+  gap: 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.dashboard-header img {
+  width: 30px;
+  border: 1px solid green;
+  border-radius: 50%;
+}
+
+.dashboard-header > div {
+  display: flex;
+  align-items: center;
+  position: relative; /* Added relative positioning to the button containers */
+}
+
+.dashboard-header button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  font-weight: 700;
+}
+
+.dashboard-header button:hover {
+  color: #2c45c2;
+}
+
+.dashboard-header button:focus {
+  outline: none;
+}
+
+.dashboard-header button svg {
+  margin-top: 2px;
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+.dashboard-header button:hover svg {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu Styling */
+.dashboard-header .dropdown-menu {
+  position: absolute; /* Position the dropdowns below the buttons */
+  top: 100%; /* Place it directly below the button */
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  padding: 10px 0;
+  display: none; /* Hide by default */
+  z-index: 10;
+}
+
+.dashboard-header .dropdown-menu p {
+  margin: 0;
+  padding: 5px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.dashboard-header .dropdown-menu p:hover {
+  background-color: #f0f0f0;
+}
+
+/* User Info Section Styling */
+.dashboard-header .user-info {
+  position: absolute;
+  top: 100%; /* Position below the button */
+  left: 0;
+  
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: none; /* Hide by default */
+  z-index: 10;
+}
+
+.dashboard-header .user-info h6 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.dashboard-header .user-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.dashboard-header .user-info button {
+  font-size: 14px;
+  padding: 6px;
+  margin-top: 5px;
+  cursor: pointer;
+  /* background-color:rgb(212, 176, 176); */
+  color: black;
+  border-bottom: 1px solid beige;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.dashboard-header .user-info button:hover {color: #1f3b8f;
+}
+
+/* Show dropdown and user info when opened */
+.dashboard-header .dropdown-menu.open {
+  display: block; /* Show dropdown when open class is applied */
+}
+
+.dashboard-header .user-info.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Show user info when open class is applied */
+}
+
+/* Mobile Menu Icon */
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* Mobile Menu Styling */
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #ffffff;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /* Adjust the dashboard header for mobile */
+  .dashboard-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 20px;
+    gap: 10px;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .dashboard-header > div {
+    flex-direction: column;
+  }
+
+  .dashboard-header button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  /* Hide the header when the menu is toggled */
+  .dashboard-header-hidden {
+    display: none;
+  }
+
+  /* User info and dropdowns for mobile */
+  .dashboard-header .dropdown-menu {
+    position: absolute;
+    top:0px;
+    width: 100%;
+    padding: 10px 0;
+    left: 0; /* Ensure the dropdown starts from the left side */
+    border-radius: 0; /* Optional: Remove border radius for consistency */
+  }
+
+  .dashboard-header .user-info {
+    position: static;
+    width: 100%;
+    padding: 5px;
+    left: 0; /* Ensure the user info starts from the left side */
+    margin-top: 5px;
+    border-radius: 0; /* Optional: Remove border radius for consistency */
+  }
+}

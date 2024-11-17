@@ -60,7 +60,6 @@ const Login = () => {
     }
   };
   const handleLoginPassword = async () => {
-    console.log(emailResponse, "emailResponse")
     try {
       const payload = {
         "event": {

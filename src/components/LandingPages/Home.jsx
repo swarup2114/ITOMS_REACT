@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../stylesheets/home.css";
-import { homeTabData } from "../../jsonFormatData/homeData";
+import { homeTabData } from "../../Data/homeData";
 import Footer from "./Footer";
 
 const Home = () => {
@@ -50,7 +50,9 @@ const Home = () => {
           <button
             key={index}
             onClick={() => setCurrentTabIndex(index)} // Update tab when clicked
-            className={`tab-button ${currentTabIndex === index ? "active" : ""}`}
+            className={`tab-button ${
+              currentTabIndex === index ? "active" : ""
+            }`}
           >
             {tab.title}
           </button>

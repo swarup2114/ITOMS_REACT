@@ -6,6 +6,8 @@ import { BsFillSendFill } from "react-icons/bs";
 
 
 const Contact = () => {
+
+
   return (
     <div>
       <div className="about-card-show">
@@ -51,22 +53,30 @@ const Contact = () => {
           <div className="enquiry-form">
             <h3>Let's Get Connected</h3>
 
-            <input type="text" placeholder="Your Name" className='input-text-field' />
-            <input type="text" placeholder="Your Email" className='input-text-field' />
-            <input type="text" placeholder="Your Phone" className='input-text-field' />
-            <input type="text" placeholder="Your Subject" className='input-text-field' />
-            <div className='input-text-your-message' >
-              <textarea placeholder="Your Message" />
-            </div>
+            <input type="text" placeholder="Your Name" />
+            <input type="text" placeholder="Your Email" />
+            <input type="text" placeholder="Your Phone" />
+            <input type="text" placeholder="Your Subject" />
+
+            <textarea placeholder="Your Message" />
             <button> <BsFillSendFill /> Send Message</button>
           </div>
         </div>
         <div className="contact-deatils">
           <h1> Contact us by Phone Number or Email Address</h1>
-          <h1><a href="tel:+918247898008" target="_blank">+91 82478 98008</a></h1>
+          <h1>
+            <a href="tel:+918247898008" >
+              +91 82478 98008
+            </a>
+          </h1>
           <h1>OR</h1>
 
-          <h1>  <a href="mailto:support@inapayments.com" target="_blank">support@inapayments.com</a></h1>
+          <h1>
+            {" "}
+            <a href="mailto:support@inapayments.com">
+              support@inapayments.com
+            </a>
+          </h1>
         </div>
       </div>
 
@@ -75,5 +85,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-
