@@ -1,4 +1,3 @@
-//app.js
 import React from "react";
 import Header from "./components/LandingPages/Header";
 import Home from "./components/LandingPages/Home";

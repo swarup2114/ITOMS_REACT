@@ -1,17 +1,21 @@
 import React from "react";
 import * as FaIcons from "react-icons/fa";
 import "../../stylesheets/userinfo.css";
+import userImage from "../../../images/userImage.png"
 
 const UserInfo = () => {
+  const userResponse = JSON.parse(localStorage.getItem("TokenResponse"))
+
+  // console.log(userName, "JSON.parse(userName).name")
   return (
     <div>
       <div className="user-info-data-conatiner">
         <div className="card">
           <div className="card-header">
-            <img src="/userImage.png" alt="User" />
+            <img src={userImage} alt="User" />
             <div className="card-info">
               <p>Hello ! </p>
-              <h4>Swarup</h4>
+              <h4>{userResponse.eventData.name}</h4>
             </div>
           </div>
         </div>

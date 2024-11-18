@@ -4,10 +4,12 @@ import LineChart from './LineGraph';
 
 const DashBoardHome = () => {
   return (
-  <div>
-      <PieChartContainer/>
+    <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+      <PieChartContainer />
       <LineChart className="line-chart" />
-  </div>
+      <LineChart className="line-chart" />
+      <LineChart className="line-chart" />
+    </div>
   );
 }
 

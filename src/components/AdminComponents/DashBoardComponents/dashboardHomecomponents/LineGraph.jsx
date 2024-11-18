@@ -16,8 +16,8 @@ const LineChart = () => {
       align: 'left',              // Title alignment
     },
     xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],  // X-axis labels (removed empty string)
-    
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],  // X-axis labels (removed empty string)
+
     },
     grid: {
       borderColor: '#f1f1f1',    // Gridline color
@@ -42,8 +42,8 @@ const LineChart = () => {
   ];
 
   return (
-    <div id="chart">
-      <ReactApexChart options={options} series={series} type="line" height={400} width="50%" />
+    <div id="chart" style={{ width: "50%" }}>
+      <ReactApexChart options={options} series={series} type="line" height={400} />
     </div>
   );
 };

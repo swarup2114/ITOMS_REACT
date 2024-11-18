@@ -6,6 +6,7 @@ import "../../../components/stylesheets/dashboardheader.css";
 
 const DashBoardHeader = () => {
   const navigate = useNavigate();
+  const userResponse = JSON.parse(localStorage.getItem("TokenResponse"))
   const [isToggleOpen, setIsToggleOpen] = useState(true);
   const [activeMenu, setActiveMenu] = useState(null); // Track the active menu (language, account, user)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Detect if screen is mobile or not
@@ -78,7 +79,7 @@ const DashBoardHeader = () => {
                 alt="user"
               />
             </span>
-            Swarup! <IoIosArrowDown />
+            {userResponse.eventData.name}<IoIosArrowDown />
           </button>
           <div className={`user-info ${activeMenu === "user" ? "open" : ""}`}>
             <img

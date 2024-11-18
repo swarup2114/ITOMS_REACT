@@ -106,6 +106,7 @@ const Login = () => {
       if (response.status == 200) {
         navigate("/dashboard");
         setTokenResponse(response.event)
+        localStorage.setItem("TokenResponse", JSON.stringify(response.event))
         setTokenError("")
       } else {
         setTokenResponse("")
