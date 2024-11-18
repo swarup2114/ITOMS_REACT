@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { CiMenuFries } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 import "../../../components/stylesheets/dashboardheader.css";
 
 const DashBoardHeader = () => {
+  const navigate = useNavigate();
   const [isToggleOpen, setIsToggleOpen] = useState(true);
   const [activeMenu, setActiveMenu] = useState(null); // Track the active menu (language, account, user)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Detect if screen is mobile or not
@@ -34,9 +36,8 @@ const DashBoardHeader = () => {
     <div>
       {/* Apply conditional classes based on screen size */}
       <div
-        className={`dashboard-header ${
-          isToggleOpen ? "dashboard-header-hidden" : ""
-        } ${isMobile ? "dashboard-header-mobile" : ""}`}
+        className={`dashboard-header ${isToggleOpen ? "dashboard-header-hidden" : ""
+          } ${isMobile ? "dashboard-header-mobile" : ""}`}
       >
         {/* Language Dropdown */}
         <div>
@@ -44,9 +45,8 @@ const DashBoardHeader = () => {
             English <IoIosArrowDown />
           </button>
           <div
-            className={`dropdown-menu ${
-              activeMenu === "language" ? "open" : ""
-            }`}
+            className={`dropdown-menu ${activeMenu === "language" ? "open" : ""
+              }`}
           >
             <p onClick={() => toggleMenu("language")}>Germany</p>
             <p onClick={() => toggleMenu("language")}>French</p>
@@ -62,9 +62,8 @@ const DashBoardHeader = () => {
             Ina Payments <IoIosArrowDown />
           </button>
           <div
-            className={`dropdown-menu ${
-              activeMenu === "account" ? "open" : ""
-            }`}
+            className={`dropdown-menu ${activeMenu === "account" ? "open" : ""
+              }`}
           >
             <p onClick={() => toggleMenu("account")}>Ina Payments</p>
           </div>
@@ -89,7 +88,9 @@ const DashBoardHeader = () => {
             <h6>Swarup</h6>
             <p>swarupt@gmail.com</p>
             <button>Profile</button>
-            <button>Logout</button>
+            <button onClick={() => {
+              navigate("/");
+            }}>Logout</button>
           </div>
         </div>
       </div>
