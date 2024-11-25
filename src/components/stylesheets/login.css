@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('../../images/ina_bg.jpeg');
+  /* background-image: url('../../images/ina_bg.jpeg'); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

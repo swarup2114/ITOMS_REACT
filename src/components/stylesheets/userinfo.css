@@ -42,18 +42,27 @@
 
 .card p {
   font-size: 16px;
-  color: #555;
+  /* color: #555; */
+  color: #4b5d67;
   margin: 0;
+}
+.card-info h4{
+  color: #299cdb;
+}
+.card h3{
+  color: var(--icon-color);
+
 }
 
 .card svg {
-  color: white;
+  /* color: white; */
+  color: #5973d8;
   background-color: orangered;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 15px;
 }
 
 .card:hover {
@@ -70,6 +79,7 @@
   gap: 20px;
   display: flex;
   align-items: center;
+  justify-content: s;
 }
 
 /* Media Queries for responsiveness */

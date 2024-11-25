@@ -12,11 +12,12 @@ import store from "./Redux/store";
 const AppWrapper = () => {
   const location = useLocation();
 
-  const showHeader = location.pathname === '/' || location.pathname === '/contact';
+  const showHeader = location.pathname === '/dashboard' 
 
   return (
     <Provider store={store}>
-      {showHeader && <Header />}
+      {/* <Header/> */}
+      {!showHeader && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

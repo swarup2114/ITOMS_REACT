@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import * as FaIcons from "react-icons/fa";
+
 import "../../../components/stylesheets/sidebar.css";
 import { sidebarData } from "../../../../src/Data/sidebar";
 
@@ -25,6 +26,7 @@ const Sidebar = () => {
           alt="logo"
         />
         <h2>ITOMS</h2>
+        
       </div>
 
       {sidebarData.map((menu) => (

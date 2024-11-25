@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setUserId, setInaSecretKey, setTenantId } from "../../Redux/AuthSlice";
 import loginBg from "../../images/login_bg.jpeg"
 import LoginIcon from "../../images/login_icon.jpeg"
+import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -122,6 +123,7 @@ const Login = () => {
       const response = await Token(payload);
       if (response.status == 200) {
         dispatch(setTenantId({ tenantId: selectedOption.value }));
+        // handleLogin()
         navigate("/dashboard");
         setTokenError("");
       } else {
@@ -131,6 +133,47 @@ const Login = () => {
       setTokenError("Login failed: " + (error.response?.data?.message || "Unknown error."));
     }
   };
+
+  const handleLogin = async (e) => {
+    // e.preventDefault();
+    // setLoading(true);
+    setTokenError("");
+  
+    try {
+      const requestBody = new URLSearchParams({
+        client_id: "union",
+        grant_type: "password",
+        username: "swarup",
+        password: "1234",
+      });
+  
+      console.log(requestBody.toString(), "requestBody");
+  
+      // Using axios to send the POST request
+      const response = await axios.post(
+        `http://localhost:8080/realms/InaPayments/protocol/openid-connect/token`,
+        requestBody,
+        {
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        }
+      );
+  
+      // Handling the response data
+      const data = response.data;
+      setTokenError(data.access_token);
+      navigate("/dashboard");
+      console.log("Access Token:", data.access_token); // Token for further API requests
+    } catch (err) {
+      // Error handling
+      setTokenError(err.response ? err.response.data.error_description : err.message, "error");
+      console.error("Error:", err.response ? err.response.data : err.message);
+    } finally {
+      // setLoading(false);
+    }
+  };
+  
 
   const SingleValue = ({ children, ...props }) => (
     <components.SingleValue {...props}>{children}</components.SingleValue>

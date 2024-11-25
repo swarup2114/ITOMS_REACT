@@ -11,16 +11,18 @@
 }
 
 .home-banner h1 {
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .section-title {
   text-align: center;
   margin-top: 20px;
   font-weight: bolder;
-  font-size: 48px;
+  font-size: 35px;
   color: #349dfd;
+  letter-spacing: 1px;
 }
 
 .home-btn-container {
@@ -34,13 +36,15 @@
 }
 
 .tab-button {
-  padding: 10px 20px;
+  padding: 10px 0px;
   font-size: 1rem;
   border: none;
+  font-weight: 600;
 
-  /* border-radius: 20px; */
+ 
   cursor: pointer;
-  background-color: white;
+  background-color: transparent;
+  color: #6c6c6c;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -51,9 +55,9 @@
 
 
 
+
 .tab-button.active {
-  border-bottom: 2px solid black;
-  /* background-color: #0056b3; */
+  border-bottom: 3px solid black;
   color: black;
 }
 
@@ -63,20 +67,113 @@
   color: orangered;
 }
 
+
+
+.tab-data p {
+  line-height: 2;
+}
+/* Tab Content Transitions */
+.tab-content {
+ padding: 0px 60px;
+  opacity: 0; /* Start as invisible */
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in transition */
+}
+.tab-content img{
+  width: 450px;
+  margin-top: 20px;
+}
+
+.tab-content.active {
+  opacity: 1; /* Make it visible when active */
+}
+
+/* Smooth Transitions for Tab Button Change */
+.tab-button {
+  padding: 10px 0px;
+  font-size: 1rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  color: #6c6c6c;
+  transition: background-color 0.3s ease, color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.tab-button.active {
+  border-bottom: 3px solid black;
+  color: black;
+}
+
+/* Smooth Transition for Card Hover Effect */
+.home-card-data {
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  flex: 1 1 200px;
+  background-color: #f5f9ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-card-data:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth transition for changing tab data */
 .tab-data {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.tab-data p {
-  line-height: 2;
+.tab-data.active {
+  opacity: 1;
+}
+
+/* Smooth transition for card hover */
+.home-card-container {
+  display: flex;
+  gap: 3vw;
+  padding: 20px;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.home-card-container .home-card-data {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-card-container .home-card-data:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .home-banner {
+    flex-direction: column;
+    height: auto;
+    margin-top: 5px;
+  }
+
+  .tab-data {
+    flex-direction: column;
+  }
+
+  .home-card-container {
+    justify-content: flex-start;
+  }
 }
 
 .home-card-container {
   display: flex;
   /* flex-wrap: wrap; */
-  gap: 5vw;
+  gap: 3vw;
   padding: 20px;
   justify-content: center;
   padding-left: 5%;
@@ -92,10 +189,10 @@
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* overflow: hidden; */
-  /* padding: 20px; */
-  padding-left: 10px;
+  padding: 10px;
+  /* padding-left: 10px;
   padding-right: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 20px; */
   flex: 1 1 200px;
   background-color: #f5f9ff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;

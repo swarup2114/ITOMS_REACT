@@ -2,6 +2,7 @@ import React from "react";
 import * as FaIcons from "react-icons/fa";
 import "../../stylesheets/userinfo.css";
 import userImage from "../../../images/userImage.png"
+import { PiCardsThreeFill } from "react-icons/pi";
 
 const UserInfo = () => {
   const userResponse = JSON.parse(localStorage.getItem("TokenResponse"))
@@ -23,8 +24,8 @@ const UserInfo = () => {
           <div className="card-details">
             <p>Terminals</p>
             <div className="card-stat">
-              <FaIcons.FaTerminal
-                style={{ backgroundColor: "rgb(0, 123, 255)" }}
+              <PiCardsThreeFill
+                style={{ backgroundColor: "#bfefff" }}
               />
               <h3>100</h3>
             </div>
@@ -34,7 +35,7 @@ const UserInfo = () => {
           <div className="card-details">
             <p>Merchants</p>
             <div className="card-stat">
-              <FaIcons.FaStore style={{ backgroundColor: "#198754" }} />
+              <FaIcons.FaStore style={{ backgroundColor: "#bfefff" }} />
               <h3>20</h3>
             </div>
           </div>
@@ -43,7 +44,7 @@ const UserInfo = () => {
           <div className="card-details">
             <p>Applications</p>
             <div className="card-stat">
-              <FaIcons.FaMobile />
+              <FaIcons.FaMobile style={{ backgroundColor: "#bfefff" }} />
               <h3>10</h3>
             </div>
           </div>

@@ -1,33 +1,37 @@
-// header
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { RiLoginBoxLine } from "react-icons/ri";
+import { RiMenu3Line } from "react-icons/ri";
+import logo from "../../Assests/logo.png";
 import "../stylesheets/header.css";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const usenav = useNavigate();
 
   return (
     <div className="header">
-      <div>
-        <img
-          src="http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/ina-logo.png"
-          alt="logo"
-        />
+      <div className="logo">
+        <img src={logo} alt="logo" />
       </div>
-      <div className="links">
-        <NavLink to="/" className="link-styles">
+
+      <div className={`links ${menuOpen ? "open" : ""}`}>
+        <NavLink to="/" className="link-styles" onClick={() => setMenuOpen(false)}>
           Home
         </NavLink>
-        <NavLink to="/contact" className="link-styles">
+        <NavLink to="/contact" className="link-styles" onClick={() => setMenuOpen(false)}>
           Contact
         </NavLink>
+        <div className="login-btn">
+          <button onClick={() => usenav("/login")}>
+            <RiLoginBoxLine /> Log In
+          </button>
+        </div>
       </div>
-      <div style={{ display: "flex", alignItems: "center" }}>
-      <button onClick={() => usenav("/login")}>
-        <RiLoginBoxLine /> Log In
-      </button>
-    </div>
+
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        <RiMenu3Line size={30} />
+      </div>
     </div>
   );
 };

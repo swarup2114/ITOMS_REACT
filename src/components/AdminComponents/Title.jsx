@@ -318,3 +318,40 @@
 // export default LineChart;
 
 ////===============================================================================================================================================================================
+import React, { useState } from 'react';
+// import './LoginPage.css';
+import loginpng from "../../Assests/LOGIN-IMAGE.png"
+
+const LoginPage = () => {
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Email submitted: ${email}`);
+  };
+
+  return (
+    <div className="login-container">
+      <div className="image-container">
+        <img src={loginpng} alt="Login" />
+      </div>
+      <div className="form-container">
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default LoginPage;

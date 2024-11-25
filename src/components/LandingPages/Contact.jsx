@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import "../stylesheets/contact.css";
+import React from 'react';
 import { HiChevronDoubleRight } from "react-icons/hi";
 import { BsFillSendFill } from "react-icons/bs";
-
+import "../stylesheets/contact.css";
 
 
 const Contact = () => {
@@ -63,10 +62,12 @@ const Contact = () => {
         </div>
         <div className="contact-deatils">
           <h1> Contact us by Phone Number or Email Address</h1>
-          <h1><a href="tel:+918247898008" target="_blank">+91 82478 98008</a></h1>
+          <h1><a href="tel:+918247898008">+91 82478 98008</a></h1>
+
           <h1>OR</h1>
 
-          <h1>  <a href="mailto:support@inapayments.com" target="_blank">support@inapayments.com</a></h1>
+          <h1>  <a href="mailto:support@inapayments.com">support@inapayments.com</a>
+          </h1>
         </div>
       </div>
 

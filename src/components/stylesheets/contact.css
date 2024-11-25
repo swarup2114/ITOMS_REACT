@@ -2,19 +2,22 @@
 .about-card-show {
   text-align: center;
   padding: 20px;
-  background-color: #13c4a1;
-  border-radius: 8px;
+  background: #ef3b36; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ef3b36, #b96868); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #535151, #8a322f);
   margin-bottom: 30px;
+ 
 }
 
 .about-card-show h1 {
   font-size: 2rem;
   color: #333;
+  color: white;
 }
 
 .about-card-show p {
   font-size: 1rem;
-  color: #666;
+  color: #cfcaca;
   margin-top: 10px;
 }
 
@@ -54,6 +57,7 @@
 .enquiry-form {
   width: 70vw;
   padding: 20px;
+  /* margin-left: 100px; */
   border-left: 1px solid wheat;
   border-radius: 8px;
   /* gap: 10px; */
@@ -94,7 +98,7 @@
 
 .enquiry-form input[type="text"]:focus,
 .enquiry-form textarea:focus {
-  border-color: #4caf50;
+  border-color:black;
   outline: none;
 }
 
@@ -175,6 +179,14 @@ h1+h1+h1+h1 {
 }
 
 /* Responsive Styles */
+@media (max-width: 1483px) {
+  .enquiry-form {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+
 @media (max-width: 768px) {
   .about-card-container {
     flex-direction: column;
@@ -205,5 +217,17 @@ h1+h1+h1+h1 {
 
   .about-card-container p {
     font-size: 0.9rem;
+  }
+  .enquiry-form textarea {
+    width: 100%;
+  }
+  .enquiry-form button {
+    padding:0px;
+    width: 100%;
+    height: 50px;
+ 
+   
+    justify-content: center;
+    gap: 0px;
   }
 }

@@ -1,47 +1,129 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  /* height: 10vh; */
   align-items: center;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #13c4a1
-    /* background-color: azure; */
-    /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
+  padding: 15px 30px;
+  background-color: #13c4a1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
 }
 
 .links {
   display: flex;
-  gap: 10px;
-  text-decoration: none;
+  gap: 20px;
+  font-size: 18px;
+  flex: 1;
+  justify-content: center;
 }
 
 .link-styles {
   text-decoration: none;
-}
-
-.links a {
-  text-decoration: none;
-  text-align: center;
-  font-size: 20px;
+  color: #333;
   font-weight: 600;
-  padding: 5px;
+  padding: 10px;
 }
 
-a.active {
-  color: green;
+.link-styles:hover {
+  color: white;
 }
 
-.header button {
-  border: 1px solid black;
+.login-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login-btn button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #333;
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
-  background-color: transparent;
-  color: darkblue;
-  /* border: none; */
-  border-radius: 5px;
   cursor: pointer;
+  color: #333;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
+}
+
+.login-btn button:hover {
+  background-color: rgb(51, 50, 50);
+  color: white;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #13c4a1;
+    gap: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  .links.open {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-icon {
+    display: block;
+    color: #fff;
+  }
+
+  .header {
+    align-items: flex-start;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .login-btn {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .login-btn {
+    display: block;
+  }
+
+  .links {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    flex: 1;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .login-btn {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
 }

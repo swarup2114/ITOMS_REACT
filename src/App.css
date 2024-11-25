@@ -1,13 +1,47 @@
+body{
+     font-family: "Poppins"
+}
+
 .dashboard-view{
     margin-left: 250px;
 }
-.dashboard-home{
+.dashboard-home {
+    width: 95%;
+    padding: 0 25px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px; /* Adds space between the items */
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
 }
+
+.dashboard-home > * {
+    flex: 1 1 calc(50% - 20px); /* Ensure items take 50% of the width minus space */
+    box-sizing: border-box; /* Ensure padding/margins are included in the width calculation */
+}
+
+@media (max-width: 768px) {
+    .dashboard-home > * {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        flex: 1 1 100%; /* Items take up 100% width on smaller screens */
+    }
+}
+
+
+.line-chart{
+    background-color: #f6f9fd;
+}
+
 @media   screen and (max-width:768px) {
     .dashboard-view{
         margin-left: 0px;
     }  
-    
+    .dashboard-home{
+        padding: 0px;
+    }
+    .line-chart {
+        width: 100%;
+    }
 }

@@ -1,6 +1,12 @@
+:root {
+  /* --primary-color: #3498db;  */
+  --icon-color:#299cdb;
+ 
+}
+
 body {
   margin: 0;
-  font-family: 'Poppins';
+ font-family: "Poppins";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

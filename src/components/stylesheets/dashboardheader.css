@@ -154,6 +154,7 @@
   .menu-icon {
     font-size: 24px;
     cursor: pointer;
+    color: black;
   }
 
   /* Adjust the dashboard header for mobile */

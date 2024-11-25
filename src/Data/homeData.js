@@ -1,10 +1,15 @@
+import Customization  from '../images/Customization.svg';
+import Zero_Deployment from "../images/Zero_Deployment.svg";
+import Multi_Dimension from "../images/Multi_Dimension.svg";
+import Firmware_and_App from "../images/Firmware_and_App.svg";
+import Device_Monitoring from "../images/Device_Monitoring.svg";
+import Remote_Assistance from "../images/Remote_Assistance.svg";
 export const homeTabData = [
   {
     title: "Zero Touch Deployment",
     description:
       "Zero Touch Deployment automates the configuration and setup process for large-scale terminal deployments. This process reduces the need for manual intervention and ensures that each terminal is ready to use out of the box.With pre-installed configurations and batch deployment options, Zero Touch Deployment ensures that devices are configured consistently and reliably across various environments.With pre-installed configurations and batch deployment options, Zero Touch Deployment ensures that devices are configured consistently and reliably across various environments.With pre-installed configurations and batch deployment options, Zero Touch Deployment ensures that devices are configured consistently and reliably across various environments.",
-    image:
-      "http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/Zero%20Touch%20Deployment/content.svg",
+    image: Zero_Deployment,
     cards: [
       {
         img: "http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/Zero%20Touch%20Deployment/Box.svg",
@@ -36,8 +41,7 @@ export const homeTabData = [
     title: "Multi Dimensional",
     description:
       "Multi Dimensional automates the configuration and setup process for large-scale terminal deployments. This process reduces the need for manual intervention and ensures that each terminal is ready to use out of the box.With pre-installed configurations and batch deployment options, Multi Dimensional ensures that devices are configured consistently and reliably across various environments.With pre-installed configurations and batch deployment options, Multi Dimensional ensures that devices are configured consistently and reliably across various environments.With pre-installed configurations and batch deployment options, Multi Dimensional ensures that devices are configured consistently and reliably across various environments.",
-    image:
-      "http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/Multi%20Dimensional/OBJECTS.svg",
+    image:Multi_Dimension,
     cards: [
       {
         img: "http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/Multi%20Dimensional/Organization.svg",
@@ -69,8 +73,7 @@ export const homeTabData = [
     title: "Firmware and App",
     description:
       "Firmware automates the configuration and setup process for large-scale terminal deployments. This process reduces the need for manual intervention and ensures that each terminal is ready to use out of the box.With pre-installed configurations and batch deployment options, Firmware ensures that devices are configured consistently and reliably across various environments.With pre-installed configurations and batch deployment options, Firmware ensures that devices are configured consistently and reliably across various environments.With pre-installed configurations and batch deployment options, Firmware ensures that devices are configured consistently and reliably across various environments.",
-    image:
-      "http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/Firmware/Firmware.svg",
+    image:Firmware_and_App,
     cards: [
       {
         img: "http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/Firmware/Remote%20Management.svg",
@@ -102,8 +105,7 @@ export const homeTabData = [
     title: " Device Monitoring ",
     description:
       "Device Monitoring automates the configuration and setup process for large-scale terminal deployments. This process reduces the need for manual intervention and ensures that each terminal is ready to use out of the box.With pre-installed configurations and batch deployment options, Device Monitoring ensures that devices are configured consistently and reliably across various environments.With pre-installed configurations and batch deployment options, Device Monitoring ensures that devices are configured consistently and reliably across various environments.With pre-installed configurations and batch deployment options, Device Monitoring ensures that devices are configured consistently and reliably across various environments.",
-    image:
-      "http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/Device%20Monitoring/Device-Moni.svg",
+    image:Device_Monitoring,
     cards: [
       {
         img: "http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/Device%20Monitoring/Rich%20Chart.svg",
@@ -135,8 +137,7 @@ export const homeTabData = [
     title: "Remote Assistance",
     description:
       "Remote Assistance automates the configuration and setup process for large-scale terminal deployments. This process reduces the need for manual intervention and ensures that each terminal is ready to use out of the box.With pre-installed configurations and batch deployment options, Remote Assistance ensures that devices are configured consistently and reliably across various environments.With pre-installed configurations and batch deployment options, Remote Assistance ensures that devices are configured consistently and reliably across various environments.With pre-installed configurations and batch deployment options, Remote Assistance ensures that devices are configured consistently and reliably across various environments.",
-    image:
-      "http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/Remote%20Assistance/content.svg",
+    image:Remote_Assistance,
     cards: [
       {
         img: "http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/Remote%20Assistance/Device%20Diagnostics.svg",
@@ -169,7 +170,7 @@ export const homeTabData = [
     description:
       "Customization automates the configuration and setup process for large-scale terminal deployments. This process reduces the need for manual intervention and ensures that each terminal is ready to use out of the box.With pre-installed configurations and batch deployment options, Customization ensures that devices are configured consistently and reliably across various environments.With pre-installed configurations and batch deployment options, Customization ensures that devices are configured consistently and reliably across various environments.With pre-installed configurations and batch deployment options, Customization ensures that devices are configured consistently and reliably across various environments",
     image:
-      "http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/Customization/Cloud.svg",
+      Customization,
     cards: [
       {
         img: "http://inatms.s3-website-us-east-1.amazonaws.com/assets/img/Customization/Customization_Icon.svg",

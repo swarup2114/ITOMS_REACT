@@ -1,49 +1,46 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 
-const LineChart = () => {
-  // Chart options and data
+const LineChart = ({text,value}) => {
+
   const options = {
     chart: {
-      type: 'line',    // Specifies the chart type (line chart)
-      height: 350,     // Height of the chart
-      zoom: {
-        enabled: false,   // Disable zooming
-      },
+      type: 'line',
+      height: 350,
+      zoom: { enabled: false },
     },
     title: {
-      text: 'Monthly Sales Data',  // Title of the chart
-      align: 'left',              // Title alignment
+      text: text,
+      align: 'left',
     },
     xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],  // X-axis labels (removed empty string)
-
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
     },
     grid: {
-      borderColor: '#f1f1f1',    // Gridline color
-      strokeDashArray: 5,        // Dotted grid lines
+      borderColor: '#f1f1f1',
+      strokeDashArray: 5,
     },
     stroke: {
-      curve: 'smooth',           // Smooth curve for the line
+      curve: 'smooth',
     },
     markers: {
-      size: 0,                   // Size of the markers on the line
-      colors: ['#fff'],          // Marker color
-      strokeColors: '#3e8e41',   // Stroke color for markers
-      strokeWidth: 1,            // Stroke width for markers
+      size: 0,
+      colors: ['#fff'],
+      strokeColors: '#3e8e41',
+      strokeWidth: 1,
     },
   };
 
   const series = [
     {
-      name: 'Sales',           // Series name
-      data: [0, 0, 0, 0, 0, 0, 0, 100, 0], // Data for the line
+      name: 'Sales',
+      data: [...value],
     },
   ];
 
   return (
-    <div id="chart" style={{ width: "50%" }}>
-      <ReactApexChart options={options} series={series} type="line" height={400} />
+    <div className="line-chart">
+      <ReactApexChart options={options} series={series} type="line" height={500} />
     </div>
   );
 };
